@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>AI Money Test Sign-in</title>
+<style>
+body { margin: 0; background: #0d1117; color: #e6edf3; font: 16px/1.5 "Segoe UI", system-ui, sans-serif;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+main { max-width: 32rem; margin: 0 auto; padding-block: 4rem; }
+a { color: #f2cc60; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Finishing sign-in&hellip;</h1>
+  <p>Sending you back to the AI Money Test app on your computer. If nothing happens, make sure the app is running and <a id="go" href="#">continue here</a>.</p>
+</main>
+<script>
+  // TikTok sends the login result here; the app itself runs on the creator's own computer.
+  var target = "http://localhost:8723/callback" + window.location.search;
+  document.getElementById("go").href = target;
+  window.location.replace(target);
+</script>
+</body>
+</html>
